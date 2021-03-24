@@ -1,0 +1,25 @@
+/* Title */
+h1 {
+    background-color: rgb(224,58,62);
+    text-align: center;
+}
+
+/* Background */
+body {
+    background-color: #ADD8E6;
+}
+
+/* Box Color */
+.column .box{
+    background-color:rgb(255,213,32);
+}
+
+/* Box h1 headers */
+.box h1 {
+    background-color: transparent;
+}
+
+/* Table Head Color */
+.box .table thead {
+    background-color: rgb(224,58,62);
+}
