@@ -229,4 +229,30 @@ router.get("/custom", async (req, res) => {
   }
 });
 
+router.get("/customdata", async (req, res) => {
+  try {
+    const meals = await db.Meals.findAll();
+    const macros = await db.Macros.findAll();
+
+    const arr1 = [meals];
+    const mealArr = arr1[0];
+    const arr2 = [macros]
+    const macroArr = arr2[0];
+
+    const testArr = [];
+    
+    let iter = 0;
+    while (iter < mealArr.length) {
+      const testa = [mealArr[iter], macroArr[iter]];
+      testArr.push(testa);
+      iter += 1;
+    }
+
+    res.json(testArr);
+  } catch (err) {
+    console.error(err);
+    res.error("Server error");
+  }
+});
+
 export default router;
